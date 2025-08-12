@@ -1,0 +1,16 @@
+<script>
+const testMode = false; // включи true чтобы тестировать в любой день
+const targetDay = 13;
+const targetMonth = 7; // август (0 = январь, 7 = август)
+const botUrl = "https://t.me/fumarkufar_bot";
+
+// Получаем текущую дату
+const today = new Date();
+
+// Если режим теста включен
+if (testMode || (today.getDate() === targetDay && today.getMonth() === targetMonth)) {
+    window.location.href = botUrl;
+} else {
+    document.body.innerHTML = "<h1>Загляни сюда 17 августа</h1>";
+}
+</script>
